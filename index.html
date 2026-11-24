@@ -213,6 +213,20 @@ nav:not(.scrolled) .burger{color:#fff}
 .prop .cred{margin-top:18px !important}
 .prop-btns .btn{white-space:nowrap}
 
+/* ajustes hero centrado + botones apilados */
+.prop-btns{flex-direction:column;align-items:center}
+.prop-btns .btn{min-width:250px}
+@media(min-width:761px){
+  .hp-veil{background:radial-gradient(ellipse 70% 60% at 50% 45%,rgba(10,36,38,.62) 0%,rgba(10,36,38,.42) 55%,rgba(10,36,38,.2) 100%),linear-gradient(180deg,rgba(10,36,38,.45) 0%,rgba(10,36,38,0) 30%,rgba(10,36,38,0) 70%,rgba(10,36,38,.5) 100%)}
+  .hp-content{justify-content:center;align-items:center;text-align:center;gap:30px}
+  .hp-q{font-size:clamp(2.6rem,4.6vw,4.3rem);font-weight:600;line-height:1.1;max-width:980px;text-shadow:0 4px 30px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.4);letter-spacing:-.005em}
+  .hp-q em{color:#9ff0ec;font-weight:600}
+  .hp-q::after{content:"";display:block;width:70px;height:2px;background:#9ff0ec;margin:26px auto 0;border-radius:2px;opacity:.9}
+  .hp-text{max-width:640px;margin:0 auto;font-size:1.08rem}
+  .hp-text p{text-shadow:0 2px 14px rgba(0,0,0,.6)}
+  .hp-text .hp-strong{font-size:1.55rem}
+}
+
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .rv.in{opacity:1;transform:none}
 
