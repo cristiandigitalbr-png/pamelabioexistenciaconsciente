@@ -105,7 +105,7 @@ nav.scrolled{background:rgba(251,252,252,.95);backdrop-filter:blur(10px);box-sha
 
 /* PROPUESTAS */
 #propuestas{background:var(--mist)}
-.prop-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1000px;margin:0 auto}
+.prop-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1000px;margin:0 auto;align-items:start}
 .prop{background:var(--white);border-radius:26px;padding:40px 36px;border:1px solid var(--aqua-line);text-align:center;display:flex;flex-direction:column}
 .prop .ic{width:60px;height:60px;border-radius:50%;background:var(--aqua-soft);color:var(--teal-deep);display:grid;place-items:center;margin:0 auto 16px}
 .prop .ic svg{width:28px;height:28px}
@@ -199,6 +199,19 @@ nav:not(.scrolled) .burger{color:#fff}
   .hp-text .btn{width:100%}
   nav:not(.scrolled) .nav-links.open a:not(.btn){color:var(--muted)}
 }
+.prop .prop-hl{font-family:var(--serif);font-style:italic;font-size:1.3rem;line-height:1.4;color:var(--teal-deep);margin:18px 0 6px;padding:14px 0;border-top:1px solid var(--aqua-line);border-bottom:1px solid var(--aqua-line)}
+.prop-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+.prop-btns .btn{padding:12px 20px;font-size:.92rem}
+.prop .cred{margin-top:18px !important}
+#propuestas .prop:nth-child(2) .prop-hl{color:#8a6a4c;border-color:var(--sand-deep)}
+.btn-yobb{background:var(--taupe);color:#fff;box-shadow:0 12px 26px rgba(168,137,106,.3)}
+.btn-yobb:hover{background:#957657;transform:translateY(-2px)}
+.btn-ghost-yobb{border-color:var(--sand-deep);color:#8a6a4c}
+.btn-ghost-yobb:hover{background:var(--sand)}
+.prop-grid{align-items:stretch !important}
+.prop-btns{margin-top:auto;padding-top:22px}
+.prop .cred{margin-top:18px !important}
+.prop-btns .btn{white-space:nowrap}
 
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .rv.in{opacity:1;transform:none}
@@ -294,18 +307,32 @@ nav:not(.scrolled) .burger{color:#fff}
       <div class="prop rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V11"/><path d="M12 12c0-5 3.3-8.3 8.3-9 0 5-3.3 8.7-8.3 9z"/><path d="M12 15c0-4.2-2.9-7.1-7.5-7.9 0 4.2 2.9 7.5 7.5 7.9z"/></svg></div>
         <span class="tag">Bioexistencia Consciente</span>
-        <h3>Escuchar el mensaje del síntoma</h3>
-        <p>Una mirada de consciencia y salud del Instituto Humano Puente, que integra lo biológico, lo emocional y lo espiritual para comprender por qué el cuerpo, los vínculos o la economía se expresan de determinada manera.</p>
-        <p>En las consultas buscamos juntas el origen de aquello que se repite o te genera malestar, para poder mirarlo con otros ojos y transformarlo.</p>
-        <p class="cred">Consultora Certificada – Humano Puente</p>
+        <h3>¿Y si aquello que hoy te limita tuviera algo para mostrarte?</h3>
+        <p>La Bioexistencia Consciente es un camino de autoconocimiento y conciencia que integra una mirada biológica, filosófica y simbólica, explorando la lógica de nuestra historia personal y ancestral.</p>
+        <p>Desde este enfoque, los síntomas y conflictos que atravesamos pueden convertirse en una oportunidad para mirar hacia nuestro interior, reconocer patrones, creencias y emociones, y descubrir nuevas posibilidades de transformación.</p>
+        <p>Un síntoma puede manifestarse en diferentes áreas de la vida: física, emocional, económica, vincular o en aquellas situaciones que sentimos que nos impiden vivir plenamente.</p>
+        <p class="prop-hl">Todo aquello que hoy te limita puede ser un punto de partida para comenzar a conocerte de una manera diferente.</p>
+        <p>Es un camino profundo que invita al compromiso, la responsabilidad personal y el movimiento hacia nuevas formas de vivir.</p>
+        <p class="cred">Consultora Certificada en Bioexistencia Consciente · Humano Puente</p>
+        <div class="prop-btns">
+          <a href="https://wa.me/5492494339455?text=Hola%20Pamela%2C%20quiero%20comenzar%20mi%20proceso%20de%20Bioexistencia%20Consciente." target="_blank" rel="noopener" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Quiero comenzar mi proceso</a>
+          <a href="https://wa.me/5492494339455?text=Hola%20Pamela%2C%20quisiera%20saber%20m%C3%A1s%20sobre%20la%20Bioexistencia%20Consciente." target="_blank" rel="noopener" class="btn btn-ghost">Quiero saber más</a>
+        </div>
       </div>
       <div class="prop rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
         <span class="tag">Tutorías YOBB</span>
-        <h3>Crecer con dirección y claridad</h3>
-        <p><em>YOBB (Your Own Big Bang)</em> es un programa del Instituto Humano Puente pensado para potenciar el desarrollo personal y profesional.</p>
-        <p>Como tutora, te acompaño a ordenar tus objetivos, reconocer tus recursos y tomar decisiones con más claridad en lo personal, lo laboral y lo económico.</p>
-        <p class="cred">Tutora YOBB</p>
+        <h3>¿Y si comenzaras a tomar las riendas de tu propia vida?</h3>
+        <p>YOBB es un acompañamiento orientado al autoliderazgo, la organización personal y la acción consciente.</p>
+        <p>Un espacio para quienes desean transformar hábitos, ordenar sus prioridades, mejorar la gestión del tiempo, revisar su economía y avanzar hacia sus objetivos.</p>
+        <p>A través de las tutorías, te acompaño a reconocer dónde estás hoy, definir hacia dónde querés ir y construir acciones concretas que te permitan avanzar.</p>
+        <p class="prop-hl">Porque no se trata solamente de saber qué querés cambiar, sino de comenzar a hacerlo y aprender a sostenerlo en el tiempo.</p>
+        <p>YOBB te invita a asumir un rol protagonista en tu vida, llevando la conciencia a tus decisiones y a tus acciones cotidianas.</p>
+        <p class="cred">Tutora Certificada YOBB</p>
+        <div class="prop-btns">
+          <a href="https://wa.me/5492494339455?text=Hola%20Pamela%2C%20quiero%20comenzar%20las%20Tutor%C3%ADas%20YOBB." target="_blank" rel="noopener" class="btn btn-yobb"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Quiero comenzar</a>
+          <a href="https://wa.me/5492494339455?text=Hola%20Pamela%2C%20quisiera%20saber%20m%C3%A1s%20sobre%20las%20Tutor%C3%ADas%20YOBB." target="_blank" rel="noopener" class="btn btn-ghost btn-ghost-yobb">Quiero saber más</a>
+        </div>
       </div>
     </div>
   </div>
